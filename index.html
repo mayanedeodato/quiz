@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <style>
+        *{
+    box-sizing: border-box;
+}
+header{
+    text-align: center;
+    background-color: rgb(85, 21, 21);
+    color: #ffffff;
+    padding: 10px 0;
+}
+.alternativas{
+    font-family: 'Jost', sans-serif;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+}
+section {
+    border: 2px solid rgb(40, 71, 207);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff
+}
+label {
+    font-family: 'Jost', sans-serif;
+    display: block;
+    padding: 7px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 1px dashed #ccc;
+    margin-bottom: 3px;
+}
+label:hover {
+    background: #d5d1e0;
+}
+button{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+
+    background-color: #76d7c8;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+button:hover {
+    background: #000;
+    color: #fff;
+}
+h2{
+    text-align: center;
+}
+#result {
+    font-size: 30px;
+    color: darkred;
+}
+    </style>
+    <title>Quiz</title>
+</head>
+<body>
+    <header>
+        <h1>QUIZ</h1>
+    </header>
+    <div class="alternativas">
+        <section id="p0">
+            <h3>Qual elemento HTML é usado para criar um link para outra página?</h3>
+            <label>
+                <input type="radio" value="1" name="p0" onclick="resposta(0, this)"> &lt;ref&gt;
+            </label>
+            <label>
+                <input type="radio" value="2" name="p0" onclick="resposta(0, this)"> &lt;link&gt;
+            </label>
+            <label>
+                <input type="radio" value="3" name="p0" onclick="resposta(0, this)"> &lt;a&gt;
+            </label>
+            <label>
+                <input type="radio" value="4" name="p0" onclick="resposta(0, this)"> &lt;url&gt;
+            </label>
+            <label>
+                <input type="radio" value="5" name="p0" onclick="resposta(0, this)"> &lt;js&gt;
+            </label>
+        </section>
+        <section id="p1">
+            <h3>O que significa a sigla "HTML"?</h3>
+            <label>
+                <input type="radio" value="1" name="p1" onclick="resposta(1, this)"> Hyper Text Markup Language
+            </label>
+            <label>
+                <input type="radio" value="2" name="p1" onclick="resposta(1, this)"> Hyper Text Modern Language
+            </label>
+            <label>
+                <input type="radio" value="3" name="p1" onclick="resposta(1, this)"> Hyperlink Text Modern Language
+            </label>
+            <label>
+                <input type="radio" value="4" name="p1" onclick="resposta(1, this)"> High-Tech Multimedia Language>
+            </label>
+            <label>
+                <input type="radio" value="5" name="p1" onclick="resposta(1, this)"> Hyperlink Transfer Markup Language
+            </label>
+        </section>
+        <section id="p2">
+            <h3>Qual é a versão mais recente do HTML?</h3>
+            <label>
+                <input type="radio" value="1" name="p2" onclick="resposta(2, this)"> HTML6
+            </label>
+            <label>
+                <input type="radio" value="2" name="p2" onclick="resposta(2, this)"> HTML4.25
+            </label>
+            <label>
+                <input type="radio" value="3" name="p2" onclick="resposta(2, this)"> HTML8
+            </label>
+            <label>
+                <input type="radio" value="4" name="p2" onclick="resposta(2, this)"> HTML5.5
+            </label>
+            <label>
+                <input type="radio" value="5" name="p2" onclick="resposta(2, this)"> HTML5
+            </label>
+        </section>
+        <section id="p3">
+            <h3>Qual propriedade CSS é usada para definir a cor de fundo de um elemento?</h3>
+            <label>
+                <input type="radio" value="1" name="p3" onclick="resposta(3, this)"> Color-background
+            </label>
+            <label>
+                <input type="radio" value="2" name="p3" onclick="resposta(3, this)"> Background-color
+            </label>
+            <label>
+                <input type="radio" value="3" name="p3" onclick="resposta(3, this)"> Color-one
+            </label>
+            <label>
+                <input type="radio" value="4" name="p3" onclick="resposta(3, this)"> Fund-color
+            </label>
+            <label>
+                <input type="radio" value="5" name="p3" onclick="resposta(3, this)"> Styler-background
+            </label>
+        </section>
+        <section id="p4">
+            <h3>O que é JavaScript?</h3>
+            <label>
+                <input type="radio" value="1" name="p4" onclick="resposta(4, this)"> Uma linguagem de programação usada apenas em servidores
+            </label>
+            <label>
+                <input type="radio" value="2" name="p4" onclick="resposta(4, this)"> Um tipo de comida
+            </label>
+            <label>
+                <input type="radio" value="3" name="p4" onclick="resposta(4, this)"> Um jogo
+            </label>
+            <label>
+                <input type="radio" value="4" name="p4" onclick="resposta(4, this)"> Uma linguagem de programação de alto nível usada para tornar as páginas da web interativas
+            </label>
+            <label>
+                <input type="radio" value="5" name="p4" onclick="resposta(4, this)"> Uma extensão de arquivo usada para documentos de texto
+            </label>
+        </section>
+
+        <button onclick="corrigir()">CORRIGIR</button>
+            <h2>Acertos: <span  id="result"></span></h2>
+        </div>
+        <script src="script.js"></script>
+</body>
+</html>
